@@ -18,7 +18,7 @@ class Bot:
         time.sleep(0.5)
 
         # set the webhook URL
-        self.telegram_bot_client.set_webhook(url=f'{telegram_chat_url}/{token}/', certificate=open('~/YOURPUBLIC.pem', 'r'),timeout=60)
+        self.telegram_bot_client.set_webhook(url=f'{telegram_chat_url}/{token}/', certificate=open('/home/ubuntu/YOURPUBLIC.pem', 'r'),timeout=60)
 
         self.prev_path = ""
 
@@ -106,7 +106,7 @@ class ImageProcessingBot(Bot):
         else:
             index = option_list.index(text)
             if 0 <= index <= 4:
-                self.send_text(msg['chat']['id'], "Hi How can I help you , you can use help for description")
+                self.send_text(msg['chat']['id'], "Hi How can I help you :) , you can use help for description")
             else:
                 self.send_text_with_quote(msg['chat']['id'], "sorry didn't understand ,yuo can use help for menu option",
                                           quoted_msg_id=msg["message_id"])
