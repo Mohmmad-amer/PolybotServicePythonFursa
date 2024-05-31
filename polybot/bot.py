@@ -106,7 +106,7 @@ class ImageProcessingBot(Bot):
         else:
             index = option_list.index(text)
             if 0 <= index <= 4:
-                self.send_text(msg['chat']['id'], "Hi How can I help you , you can use help for description")
+                self.send_text(msg['chat']['id'], "Hi How can I help you :) , you can use help for description")
             else:
                 self.send_text_with_quote(msg['chat']['id'], "sorry didn't understand ,yuo can use help for menu option",
                                           quoted_msg_id=msg["message_id"])
