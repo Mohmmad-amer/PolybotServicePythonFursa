@@ -5,7 +5,7 @@ import time
 from telebot.types import InputFile
 from img_proc import Img
 
-
+#bot class
 class Bot:
 
     def __init__(self, token, telegram_chat_url):
